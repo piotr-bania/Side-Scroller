@@ -1,4 +1,3 @@
-import * as THREE from 'three'
 import scene from '../main/setup'
 import {
     GLTFLoader
