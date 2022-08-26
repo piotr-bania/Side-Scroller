@@ -1,6 +1,6 @@
 import * as THREE from 'three'
-import scene from '../core/setup'
-import camera from '../core/setup'
+import scene from '../main/setup'
+import camera from '../main/setup'
 import platform1 from '../levels/level'
 
 import {

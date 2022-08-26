@@ -8,7 +8,6 @@ import {
 import {
     GLTFLoader
 } from 'three/examples/jsm/loaders/GLTFLoader'
-
 import * as dat from 'lil-gui'
 
 // ------------------------- Canvas -------------------------
