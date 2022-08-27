@@ -5,13 +5,13 @@ import {
     GLTFLoader
 } from 'three/examples/jsm/loaders/GLTFLoader'
 
-import Player from '../../assets//outlined_black.gltf'
+import Player from '../../assets/sprites/ball.gltf'
 
 let player = new GLTFLoader()
 player.load(Player, function (gltf) {
     player = gltf.scene
     player.receiveShadow = true
-    player.scale.set(0.15, 0.15, 0.15)
+    player.scale.set(1, 1, 1)
     scene.add(player)
 })
 

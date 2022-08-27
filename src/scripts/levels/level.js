@@ -4,7 +4,7 @@ import {
 } from 'three/examples/jsm/loaders/GLTFLoader'
 
 // Model
-import Platform from '../../assets/landscape/landscape2.gltf'
+import Platform from '../../assets/levels/land_test_array.gltf'
 
 let platform1 = new GLTFLoader()
 platform1.load(Platform, function (gltf) {

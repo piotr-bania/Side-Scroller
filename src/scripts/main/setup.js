@@ -15,6 +15,9 @@ const sizes = {
     height: window.innerHeight
 }
 
+// ------------------------- Third Person Camera -------------------------
+
+
 // ------------------------- Camera -------------------------
 const camera = new THREE.PerspectiveCamera(45, sizes.width / sizes.height)
 camera.position.set(0, 0, 5)
@@ -28,7 +31,7 @@ const renderer = new THREE.WebGLRenderer({
 })
 
 renderer.toneMapping = THREE.ACESFilmicToneMapping
-renderer.toneMappingExposure = 0.4
+renderer.toneMappingExposure = 1
 renderer.outputEncoding = THREE.sRGBEncoding
 
 renderer.setSize(sizes.width, sizes.height)
@@ -36,12 +39,14 @@ renderer.render(scene, camera)
 renderer.setClearColor(0x000000)
 renderer.shadowMap.enabled = true
 
-// // ------------------------- Controls -------------------------
-// const controls = new OrbitControls(camera, renderer.domElement)
-// controls.autoRotate = false
-// controls.enableDamping = true
-// controls.autoRotateSpeed = 10
-// controls.enableZoom = false
+// ------------------------- Controls -------------------------
+const controls = new OrbitControls(camera, renderer.domElement)
+controls.enableZoom = true
+controls.enableDamping = true
+controls.minDistance = 2
+controls.maxDistance = 5
+controls.enablePan = false
+controls.maxPolarAngle = Math.PI / 2 - 0.05
 
 // ------------------------- Clock -------------------------
 const clock = new THREE.Clock()
@@ -53,8 +58,8 @@ const tick = () => {
     // Render
     renderer.render(scene, camera)
 
-    // // Controls
-    // controls.update()
+    // Controls
+    controls.update()
 
     // Call tick again on the next frame
     window.requestAnimationFrame(tick)
