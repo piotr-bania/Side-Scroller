@@ -31,7 +31,7 @@ const renderer = new THREE.WebGLRenderer({
 })
 
 renderer.toneMapping = THREE.ACESFilmicToneMapping
-renderer.toneMappingExposure = 1
+renderer.toneMappingExposure = 0.4
 renderer.outputEncoding = THREE.sRGBEncoding
 
 renderer.setSize(sizes.width, sizes.height)
@@ -60,6 +60,7 @@ const tick = () => {
 
     // Controls
     controls.update()
+    camera.lookAt(0, 0, 0)
 
     // Call tick again on the next frame
     window.requestAnimationFrame(tick)

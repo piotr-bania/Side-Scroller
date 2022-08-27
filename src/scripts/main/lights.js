@@ -9,19 +9,19 @@ import * as dat from 'lil-gui'
 
 // Point
 const pointLight = new THREE.PointLight(0xcc6600, 1)
-pointLight.position.set(1, 1, 0)
+pointLight.position.set(0, 0.5, 0)
 scene.add(pointLight)
-// Point Helper
-const sphereSize = 1;
-const pointLightHelper = new THREE.PointLightHelper(pointLight, sphereSize);
-scene.add(pointLightHelper)
+// // Point Helper
+// const sphereSize = 0.1;
+// const pointLightHelper = new THREE.PointLightHelper(pointLight, sphereSize);
+// scene.add(pointLightHelper)
 
 // // Directional
-// const directionalLight = new THREE.DirectionalLight(0x03544e, 5)
-// directionalLight.position.set(3, 2, 3)
+// const directionalLight = new THREE.DirectionalLight(0x03544e, 1)
+// directionalLight.position.set(1, 1, 1)
 // scene.add(directionalLight)
-// // Directional Helper
-// const directionalLightHelper = new THREE.DirectionalLightHelper(directionalLight, 5)
+// Directional Helper
+// const directionalLightHelper = new THREE.DirectionalLightHelper(directionalLight, 1)
 // scene.add(directionalLightHelper)
 
 // // Hemisphere
