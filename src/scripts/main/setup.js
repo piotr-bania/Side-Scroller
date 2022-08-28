@@ -2,21 +2,20 @@ import * as THREE from 'three'
 import {
     OrbitControls
 } from 'three/examples/jsm/controls/OrbitControls.js'
+import {platform, world, playerBody} from '../levels/level_1'
 
 // ------------------------- Canvas -------------------------
 const canvas = document.querySelector('canvas.webgl')
 
 // ------------------------- Scene -------------------------
 const scene = new THREE.Scene()
+// scene.add(new THREE.AxesHelper(2))
 
 // ------------------------- Sizes -------------------------
 const sizes = {
     width: window.innerWidth,
     height: window.innerHeight
 }
-
-// ------------------------- Third Person Camera -------------------------
-
 
 // ------------------------- Camera -------------------------
 const camera = new THREE.PerspectiveCamera(45, sizes.width / sizes.height)
@@ -50,10 +49,17 @@ controls.maxPolarAngle = Math.PI / 2 - 0.05
 
 // ------------------------- Clock -------------------------
 const clock = new THREE.Clock()
+let oldElapsedTime = 0
 
 // ------------------------- Tick function -------------------------
 const tick = () => {
     const elapsedTime = clock.getElapsedTime()
+    const deltaTime = elapsedTime - oldElapsedTime
+    oldElapsedTime = elapsedTime
+
+    // Update physics world
+    world.step(1 / 60, deltaTime, 3)
+    // sphere.position.copy(playerBody.position)
 
     // Render
     renderer.render(scene, camera)

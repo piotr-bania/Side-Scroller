@@ -1,5 +1,5 @@
 import './styles/main.scss'
-import './scripts/sprites/sprite'
-import './scripts/levels/level'
+import './scripts/sprites/player'
+import './scripts/levels/level_1'
 import './scripts/main/lights'
 import './scripts/main/environment'
