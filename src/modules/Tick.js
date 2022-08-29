@@ -13,16 +13,8 @@ const tick = () => {
     const deltaTime = elapsedTime - oldElapsedTime
     oldElapsedTime = elapsedTime
 
-    // Update physics world
-    // world.step(1 / 60, deltaTime, 3)
-    // sphere.position.copy(playerBody.position)
-
     // Render
     renderer.render(scene, camera)
-
-    // Controls
-    // controls.update()
-    // camera.lookAt(0,0,0)
 
     // Call tick again on the next frame
     window.requestAnimationFrame(tick)

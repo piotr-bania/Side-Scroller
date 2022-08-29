@@ -10,8 +10,12 @@ import camera from './modules/Camera'
 import renderer from './modules/Renderer'
 import controls from './modules/OrbitControls'
 import tick from './modules/Tick'
+import window from './modules/ResizeWindow'
+import environment from './modules/Environment'
+// import pointLight from './modules/Lights'
+
 
 // Scripts
 import player from './scripts/sprites/Player'
 
-console.log(tick.clock)
+console.log()
