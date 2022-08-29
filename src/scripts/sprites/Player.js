@@ -1,4 +1,3 @@
-import * as THREE from 'three'
 import {
     GLTFLoader
 } from 'three/examples/jsm/loaders/GLTFLoader'
@@ -11,9 +10,9 @@ import Player from '../../assets/sprites/ball.gltf'
 let player = new GLTFLoader()
 player.load(Player, function (gltf) {
     player = gltf.scene
-    player.position.set(0, 0, 0)
+    player.position.set(1, 0, 0)
     scene.add(player)
-    console.log(player.position)
+    // console.log(player.position)
 })
 
 export default player
