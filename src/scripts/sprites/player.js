@@ -1,47 +1,41 @@
+import * as THREE from 'three'
 import scene from '../main/setup'
 import {
     GLTFLoader
 } from 'three/examples/jsm/loaders/GLTFLoader'
-import CANNON from 'cannon'
 
 // Import models
 import Player from '../../assets/sprites/ball.gltf'
-
-// ------------------------- Physics -------------------------
-// World
-const world = new CANNON.World()
-world.gravity.set(0, -9.82, 0)
-
-// Player body
-const playerShape = new CANNON.Sphere(0.2)
-const playerBody = new CANNON.Body({
-    mass: 1,
-    position: new CANNON.Vec3(0, 2, 0),
-    shape: playerShape
-})
-world.addBody(playerBody)
 
 // Player
 let player = new GLTFLoader()
 player.load(Player, function (gltf) {
     player = gltf.scene
-    player.receiveShadow = true
-    player.position.set(0, 0, 0)
+    player.position.set(0, -0.2, 0)
     scene.add(player)
+    console.log(player.position)
 })
 
-// ------------------------- Controls -------------------------
+// Sphere
+const geometry = new THREE.SphereGeometry(0.2, 12, 12)
+const material = new THREE.MeshBasicMaterial({
+    color: 0xffff00
+})
+const sphere = new THREE.Mesh(geometry, material)
+scene.add(sphere)
+
+// ------------------------- Player controls -------------------------
 document.onkeydown = function (e) {
     var keyCode = event.which
     if (keyCode === 37) {
-        player.position.x -= 0.05
-        // camera.position.x += 0.02
-        // camera.lookAt(player.position.x)
+        sphere.position.x -= 0.01
+        player.position.x = sphere.position.x
+        player.position.x = sphere.position.x
     }
     if (keyCode === 39) {
-        player.position.x += 0.05
-        // camera.position.x -= 0.02
-        // camera.lookAt(player.position.x)
+        sphere.position.x += 0.01
+        player.position.x = sphere.position.x
+
     }
     // if (keyCode === 38) {
     //     mars.position.y += 0.1
@@ -49,4 +43,11 @@ document.onkeydown = function (e) {
     // if (keyCode === 40) {
     //     mars.position.y -= 0.1
     // }
+}
+
+// ------------------------- Physics -------------------------
+
+export {
+    player,
+    sphere
 }
