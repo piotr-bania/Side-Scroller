@@ -13,7 +13,25 @@ player.load(Player, function (gltf) {
     player = gltf.scene
     player.position.set(0.2, 0.2, 0.2)
     scene.add(player)
-    camera.lookAt(player.position)
+
+    //  Player controls
+    document.onkeydown = function (e) {
+        var keyCode = event.which
+        if (keyCode === 37) {
+            player.position.x -= 0.01
+            camera.lookAt(player.position)
+        }
+        if (keyCode === 39) {
+            player.position.x += 0.01
+            camera.lookAt(player.position)
+        }
+        // if (keyCode === 38) {
+        //     mars.position.y += 0.1
+        // }
+        // if (keyCode === 40) {
+        //     mars.position.y -= 0.1
+        // }
+    }
 })
 
 export default player
