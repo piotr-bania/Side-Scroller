@@ -1,3 +1,7 @@
+import sizes from './Sizes'
+import camera from './Camera'
+import renderer from './Renderer'
+
 // Resize window
 window.addEventListener('resize', () => {
 

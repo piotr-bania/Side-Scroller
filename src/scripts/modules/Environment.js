@@ -9,7 +9,7 @@ const fog = new THREE.Fog('#F2F8F7', 1, 15)
 scene.fog = fog
 
 // ------------------------- HDRI -------------------------
-import hdri from '../assets/hdri/shanghai_bund_2k.hdr'
+import hdri from '../../assets/hdri/shanghai_bund_2k.hdr'
 
 new RGBELoader()
     .load(hdri, function (texture) {

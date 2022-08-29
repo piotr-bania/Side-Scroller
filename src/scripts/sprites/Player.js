@@ -1,8 +1,8 @@
 import {
     GLTFLoader
 } from 'three/examples/jsm/loaders/GLTFLoader'
-import scene from '../../modules/Scene'
-import camera from '../../modules/Camera'
+import scene from '../modules/Scene'
+import camera from '../modules/Camera'
 
 // Import models
 import Player from '../../assets/sprites/ball.gltf'
@@ -11,7 +11,7 @@ import Player from '../../assets/sprites/ball.gltf'
 let player = new GLTFLoader()
 player.load(Player, function (gltf) {
     player = gltf.scene
-    player.position.set(0.2, 0.2, 0.2)
+    player.position.set(0, 0, 0)
     scene.add(player)
 
     //  Player controls

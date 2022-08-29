@@ -2,17 +2,17 @@
 import './styles/main.scss'
 
 // Modules
-import data from './modules/Data'
-import canvas from './modules/Canvas'
-import scene from './modules/Scene'
-import sizes from './modules/Sizes'
-import camera from './modules/Camera'
-import renderer from './modules/Renderer'
-import controls from './modules/OrbitControls'
-import tick from './modules/Tick'
-import window from './modules/ResizeWindow'
-import environment from './modules/Environment'
-// import pointLight from './modules/Lights'
+import data from './scripts/modules/Data'
+import canvas from './scripts/modules/Canvas'
+import scene from './scripts/modules/Scene'
+import sizes from './scripts/modules/Sizes'
+import camera from './scripts/modules/Camera'
+import renderer from './scripts/modules/Renderer'
+import controls from './scripts/modules/OrbitControls'
+import tick from './scripts/modules/Tick'
+import window from './scripts/modules/ResizeUpdate'
+import environment from './scripts/modules/Environment'
+// import pointLight from './scripts/modules/Lights'
 
 
 // Scripts
