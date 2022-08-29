@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import scene from '../main/setup'
+import scene from './_setup'
 import {
     RGBELoader
 } from 'three/examples/jsm/loaders/RGBELoader'

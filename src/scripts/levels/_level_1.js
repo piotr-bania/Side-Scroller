@@ -1,4 +1,4 @@
-import scene from '../main/setup'
+import scene from '../main/_setup'
 import {
     GLTFLoader
 } from 'three/examples/jsm/loaders/GLTFLoader'

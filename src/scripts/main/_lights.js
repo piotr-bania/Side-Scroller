@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import scene from '../main/setup'
+import scene from './setup'
 import * as dat from 'lil-gui'
 
 // ------------------------- Lights -------------------------
