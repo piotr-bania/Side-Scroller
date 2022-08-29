@@ -14,8 +14,8 @@ import window from './scripts/modules/ResizeUpdate'
 import environment from './scripts/modules/Environment'
 // import pointLight from './scripts/modules/Lights'
 
-
 // Scripts
-import player from './scripts/sprites/Player'
+import player from './scripts/sprites/Player1'
+import level from './scripts/levels/Level1'
 
 console.log()
