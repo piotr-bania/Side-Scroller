@@ -12,10 +12,23 @@ import controls from './scripts/modules/OrbitControls'
 import tick from './scripts/modules/Tick'
 import window from './scripts/modules/ResizeUpdate'
 import environment from './scripts/modules/Environment'
-// import pointLight from './scripts/modules/Lights'
+import machine from './scripts/modules/Machine'
 
 // Scripts
 import player from './scripts/sprites/Player1'
 import level from './scripts/levels/Level1'
 
-console.log()
+
+
+
+
+
+
+
+
+
+// machine.addCallback(() => {
+//     player.position.x += 0.01
+//     renderer.render(scene, camera)
+// })
+// machine.start()
