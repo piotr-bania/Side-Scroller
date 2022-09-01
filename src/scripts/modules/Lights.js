@@ -6,10 +6,10 @@ import * as dat from 'lil-gui'
 // const ambientLight = new THREE.AmbientLight(0xffa95c, 1)
 // scene.add(ambientLight)
 
-// // Point
-// const pointLight = new THREE.PointLight(0xcc6600, 1)
-// pointLight.position.set(0, 0.5, 0)
-// scene.add(pointLight)
+// Point
+const pointLight = new THREE.PointLight(0x7161F5, 5)
+pointLight.position.set(-.21, 0.-0.36, 0.8)
+scene.add(pointLight)
 // // Point Helper
 // const sphereSize = 0.1;
 // const pointLightHelper = new THREE.PointLightHelper(pointLight, sphereSize);

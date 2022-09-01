@@ -5,7 +5,7 @@ import {
 } from 'three/examples/jsm/loaders/RGBELoader'
 
 // ------------------------- Fog -------------------------
-const fog = new THREE.Fog('#F2F8F7', 1, 15)
+const fog = new THREE.Fog('#F2F8F7', 1, 14)
 scene.fog = fog
 
 // ------------------------- HDRI -------------------------

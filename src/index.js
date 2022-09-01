@@ -13,6 +13,7 @@ import tick from './scripts/modules/Tick'
 import window from './scripts/modules/ResizeUpdate'
 import environment from './scripts/modules/Environment'
 import machine from './scripts/modules/Machine'
+import pointLight from './scripts/modules/Lights'
 
 // Scripts
 import player from './scripts/sprites/Player1'
